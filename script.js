@@ -41,7 +41,15 @@ function typeWriter(){
     }
 }
 
-yesBtn.addEventListener("click", function(){
+yesBtn.addEventListener(“click”, function(){
+
+    for(let i = 0; i < 50; i++){
+        setTimeout(() => {
+            createHeart();
+        }, i * 100);
+    }
+
+    document.title = “💖 คุณเป็นแฟนเราแล้ว 💖”;
 
     content.innerHTML = `
     <h1 style="color:#ff4f9a;">เย้~ 💖</h1>
