@@ -85,3 +85,85 @@ button{
   display: block;
   visibility: visible;
 }
+body::before{
+    content:”💗 💕 💖 💘”;
+    position:fixed;
+    top:20px;
+    left:0;
+    width:100%;
+    text-align:center;
+    font-size:24px;
+    opacity:.35;
+    animation:sparkle 2s infinite alternate;
+}
+
+@keyframes sparkle{
+    from{ transform:translateY(0); opacity:.25; }
+    to{ transform:translateY(10px); opacity:.6; }
+}
+
+.envelope{
+    animation:bounceSoft 2s infinite;
+}
+
+@keyframes bounceSoft{
+    0%,100%{ transform:translateY(0); }
+    50%{ transform:translateY(-8px); }
+}
+
+.no:hover{
+    animation:shake .3s;
+}
+
+@keyframes shake{
+    0%{ transform:translateX(0); }
+    25%{ transform:translateX(-5px); }
+    50%{ transform:translateX(5px); }
+    75%{ transform:translateX(-5px); }
+    100%{ transform:translateX(0); }
+}
+.envelope{
+    animation: pop 1s ease;
+}
+
+@keyframes pop{
+    0%{ transform: scale(0.8); opacity:0; }
+    100%{ transform: scale(1); opacity:1; }
+}
+
+.letter{
+    box-shadow: 0 10px 30px rgba(255,79,154,.35);
+}
+
+#content{
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn{
+    from{ opacity:0; transform: translateY(20px); }
+    to{ opacity:1; transform: translateY(0); }
+}
+
+button{
+    box-shadow: 0 6px 15px rgba(255,79,154,.3);
+}
+button:hover{
+    transform: scale(1.08);
+    transition: 0.3s;
+}
+
+.yes{
+    animation: glow 2s infinite;
+}
+
+@keyframes glow{
+    0%{
+        box-shadow: 0 0 10px rgba(255,79,154,.4);
+    }
+    50%{
+        box-shadow: 0 0 30px rgba(255,79,154,.9);
+    }
+    100%{
+        box-shadow: 0 0 10px rgba(255,79,154,.4);
+    }
+}
