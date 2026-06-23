@@ -1,0 +1,72 @@
+body{
+    margin:0;
+    font-family:Tahoma,sans-serif;
+    background:linear-gradient(135deg,#ffd6e7,#fff5fa);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    overflow:hidden;
+}
+
+.envelope{
+    width:320px;
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    cursor:pointer;
+    box-shadow:0 0 20px rgba(0,0,0,.15);
+}
+
+.hidden{
+    display:none;
+}
+
+#content{
+    text-align:center;
+    max-width:500px;
+    padding:20px;
+}
+
+#message{
+    color:#ff4f9a;
+    font-size:22px;
+    white-space:pre-line;
+    min-height:250px;
+}
+
+button{
+    border:none;
+    padding:12px 24px;
+    border-radius:25px;
+    font-size:18px;
+    cursor:pointer;
+    margin:10px;
+}
+
+.yes{
+    background:#ff4f9a;
+    color:white;
+}
+
+.no{
+    background:#eee;
+}
+
+.heart{
+    position:absolute;
+    font-size:25px;
+    animation:float 4s linear forwards;
+}
+
+@keyframes float{
+    from{
+        transform:translateY(100vh);
+        opacity:1;
+    }
+    to{
+        transform:translateY(-100px);
+        opacity:0;
+    }
+}
