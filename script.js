@@ -96,14 +96,15 @@ function createHeart(){
 const bgm = document.getElementById("bgm");
 const musicBtn = document.getElementById("musicBtn");
 
-musicBtn.addEventListener("click", function () {
+musicBtn.addEventListener("click", function(event) {
+    event.stopPropagation();
 
     if (bgm.paused) {
         bgm.play();
         musicBtn.innerHTML = "⏸️ ปิดเพลง";
     } else {
         bgm.pause();
+        bgm.currentTime = 0;
         musicBtn.innerHTML = "🎵 เปิดเพลง";
     }
-
 });
