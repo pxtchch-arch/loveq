@@ -93,3 +93,8 @@ function createHeart(){
         heart.remove();
     },4000);
 }
+document.body.addEventListener("click", function() {
+
+    document.getElementById("bgm").play();
+
+}, { once: true });
