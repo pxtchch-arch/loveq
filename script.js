@@ -93,13 +93,17 @@ function createHeart(){
         heart.remove();
     },4000);
 }
-document.body.addEventListener("click", function () {
-    const music = document.getElementById("bgm");
+const bgm = document.getElementById("bgm");
+const musicBtn = document.getElementById("musicBtn");
 
-    if (music) {
-        music.volume = 1;
-        music.play().catch(function(error){
-            console.log("เพลงเล่นไม่ได้", error);
-        });
+musicBtn.addEventListener("click", function () {
+
+    if (bgm.paused) {
+        bgm.play();
+        musicBtn.innerHTML = "⏸️ ปิดเพลง";
+    } else {
+        bgm.pause();
+        musicBtn.innerHTML = "🎵 เปิดเพลง";
     }
+
 });
