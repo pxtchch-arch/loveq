@@ -93,8 +93,13 @@ function createHeart(){
         heart.remove();
     },4000);
 }
-document.body.addEventListener("click", function() {
+document.body.addEventListener("click", function () {
+    const music = document.getElementById("bgm");
 
-    document.getElementById("bgm").play();
-
-}, { once: true });
+    if (music) {
+        music.volume = 1;
+        music.play().catch(function(error){
+            console.log("เพลงเล่นไม่ได้", error);
+        });
+    }
+});
