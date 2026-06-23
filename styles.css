@@ -81,7 +81,7 @@ button{
   padding: 12px 18px;
   font-size: 16px;
   cursor: pointer;
-  z-index: 999;
+  z-index: 9999;
   display: block;
   visibility: visible;
 }
