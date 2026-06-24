@@ -49,31 +49,29 @@ yesBtn.addEventListener(“click”, function(){
         }, i * 100);
     }
 
-    document.title = “💖 คุณเป็นแฟนเราแล้ว 💖”;
-
     content.innerHTML = `
-    <h1 style="color:#ff4f9a;">เย้~ 💖</h1>
+<h1 style=”color:#ff4f9a;“>เย้~ 💖</h1>
 
-    <h2 style="color:#ff4f9a;">
-    คุณเคลียร์ตอบตกลงแล้ว 🥰
-    </h2>
+<h2 style=”color:#ff4f9a;“>
+คุณเคลียร์ตอบตกลงแล้ว 🥰
+</h2>
 
-    <p>
-    ขอบคุณที่ตอบตกลงนะ ❤️
-    </p>
-
+<p>
+ขอบคุณที่ตอบตกลงนะ ❤️
+</p>
+`;
+});
     <p>
     เราดีใจมากเลยที่คุณให้โอกาสเรา ✨
     </p>
 
     <p>
-    อย่ามัวแต่นั่งยิ้มคนเดียวล่ะเค้าจะจะว่าเป็นบ้า 💕
-    </p>
-    `;
+อย่ามัวแต่นั่งยิ้มคนเดียวล่ะเค้าจะจะว่าเป็นบ้า 💕
+</p>
+`;
 
-    setInterval(createHeart,200);
+setInterval(createHeart, 200);
 });
-
 noBtn.addEventListener("mouseover", function(){
 
     noBtn.style.position = "absolute";
