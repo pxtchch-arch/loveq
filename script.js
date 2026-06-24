@@ -9,11 +9,16 @@ const text = `ถึงคุณเคลียร์ 💌
 
 เรามีอะไรจะถามคุณ
 
-พร้อมอ่านยังคุน
-พร้อมยัง ลุ้นอะดิ
-พร้อมแล้วก็อ่าน
+พร้อมยัง
+พร้อมอ่านยัง ลุ้นอะดิ
 
-คุณพร้อมจะเป็นแฟนเราหรือยัง🫪`;
+พร้อมยัง
+กำลังลีลาอยู่
+พร้อมยังอะ
+
+วันนี้เราเลยอยากถามคุณตรง ๆ
+
+คุณพร้อมจะเป็นแฟนเราหรือยัง `;
 
 let i = 0;
 
@@ -41,37 +46,31 @@ function typeWriter(){
     }
 }
 
-yesBtn.addEventListener(“click”, function(){
-
-    for(let i = 0; i < 50; i++){
-        setTimeout(() => {
-            createHeart();
-        }, i * 100);
-    }
+yesBtn.addEventListener("click", function(){
 
     content.innerHTML = `
-<h1 style=”color:#ff4f9a;“>เย้~ 💖</h1>
+    <h1 style="color:#ff4f9a;">เย้~ 💖</h1>
 
-<h2 style=”color:#ff4f9a;“>
-คุณเคลียร์ตอบตกลงแล้ว 🥰
-</h2>
+    <h2 style="color:#ff4f9a;">
+    คุณเคลียร์ตอบตกลงแล้ว 🥰
+    </h2>
 
-<p>
-ขอบคุณที่ตอบตกลงนะ ❤️
-</p>
-`;
-});
+    <p>
+    ขอบคุณที่ตอบตกลงนะ ❤️
+    </p>
+
     <p>
     เราดีใจมากเลยที่คุณให้โอกาสเรา ✨
     </p>
 
     <p>
-อย่ามัวแต่นั่งยิ้มคนเดียวล่ะเค้าจะจะว่าเป็นบ้า 💕
-</p>
-`;
+    อย่ามัวนั่งยิ้มคนเดียวเดี๋ยวคนอื่นเค้าจะจะว่าเป็นบ้านะ 💕
+    </p>
+    `;
 
-setInterval(createHeart, 200);
+    setInterval(createHeart,200);
 });
+
 noBtn.addEventListener("mouseover", function(){
 
     noBtn.style.position = "absolute";
@@ -91,6 +90,14 @@ function createHeart(){
     heart.innerHTML = "💖";
 
     heart.style.left =
+    Math.random() * 100 + "vw";
+
+    document.body.appendChild(heart);
+
+    setTimeout(function(){
+        heart.remove();
+    },4000);
+}
     Math.random() * 100 + "vw";
 
     document.body.appendChild(heart);
